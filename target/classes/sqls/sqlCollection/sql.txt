@@ -1,1 +1,35 @@
 쿼리문 작성!!
+
+----김영권 커뮤니티----
+CREATE TABLE cb
+(
+    seq          INT            NOT NULL    AUTO_INCREMENT, 
+    id           VARCHAR(45)    NOT NULL, 
+    title        VARCHAR(45)    NOT NULL, 
+    contents     TEXT           NOT NULL, 
+    createdtime  TIMESTAMP      NULL, 
+    readcount    INT            NULL, 
+    deletetime   TIMESTAMP      NULL, 
+    updatetime   TIMESTAMP      NULL, 
+    PRIMARY KEY (seq)
+);
+
+
+CREATE TABLE cbParam
+(
+    seq          INT            NOT NULL, 
+    id           VARCHAR(45)    NOT NULL, 
+    contents     VARCHAR(45)    NULL, 
+    createdtime  TIMESTAMP      NULL, 
+    deletetime   TIMESTAMP      NULL, 
+    updatetime   TIMESTAMP      NULL   
+);
+
+INSERT INTO cb
+VALUES (1, 'helloid', 'hellotitle', 'hellocontents', 0, 0, 0, 0),
+(2, 'helloid2', 'hellotitle2', 'hellocontents2', 0, 0, 0, 0),;
+
+INSERT INTO cbparam
+VALUES (1, 'hiid', 'hicontents', 0, 0, 0),
+(2, 'hiid2', 'hicontents2', 0, 0, 0);
+--------------------------------------------------------
