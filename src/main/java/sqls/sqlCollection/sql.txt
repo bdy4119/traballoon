@@ -35,6 +35,9 @@ VALUES (1, 'hiid', 'hicontents', 0, 0, 0),
 --------------------------------------------------------
 
 
+
+
+
 -- -----------------------------------다연 DB --------------------------------------------------------
 create table review(
 	seq int auto_increment primary key COMMENT '시퀀스 넘버',
@@ -65,7 +68,7 @@ select seq, id, ref, step, depth, title, content, wdate, del, readcount, updated
 from
 (select row_number()over(order by ref desc, step asc) as rnum,
 	seq, id, ref, step, depth, title, content, wdate, del, readcount, updatedate, deletedate
-from bbs
+from review
 
 order by ref desc, step asc) a
 where rnum between 21 and 30;
